@@ -1,16 +1,16 @@
 # docker-jenkins
 
-Sets up a container with jenkins installed listening on port 8080.
+Sets up a complete container with jenkins and all the jenkins template php dependencies installed listening on port 8080.
 
 ## Usage
 
 To run the container, do the following:
 
-    docker run -d -P aespinosa/jenkins
+    docker run -d -P cyberkurumin/jenkins-php
     
     docker ps
     CONTAINER ID        IMAGE                       COMMAND                CREATED             STATUS              PORTS                     NAMES
-    1131d37c38b1        aespinosa/jenkins:latest    java -jar /opt/jenki   12 seconds ago      Up 12 seconds       0.0.0.0:49153->8080/tcp   drunk_fermi
+    1131d37c38b1        cyberkurumin/jenkins-php:latest    java -jar /opt/jenki   12 seconds ago      Up 12 seconds       0.0.0.0:49153->8080/tcp   drunk_fermi
 
 Your jenkins instance is now available by going to http://localhost:49153 .
 
@@ -18,21 +18,20 @@ Your jenkins instance is now available by going to http://localhost:49153 .
 
 To build the image, simply invoke
 
-    docker build github.com/aespinosa/docker-jenkins
+    docker build github.com/cyberkurumin/docker-jenkins
 
 A prebuilt container is also available in the docker index
 
-    docker pull aespinosa/jenkins
+    docker pull cyberkurumin/jenkins-php
 
 
 ## Author
 
-  * Allan Espinosa (<allan.espinosa@outlook.com>)
-  * Gwenn Etourneau
+  * Jorge GOMES <jorge@blondeel-gomes.net>
 
 ## LICENSE
 
-Copyright 2013 Allan Espinosa
+Copyright 2014 Jorge GOMES
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
